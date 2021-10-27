@@ -22,21 +22,11 @@ public class App {
 
 
         switch (bankAccount) {
-
-            case ACCOUNT_A:
-                System.out.println("Account A ");
-                break;
-            case ACCOUNT_B:
-                System.out.println("Account B ");
-                break;
-            case ACCOUNT_C:
-                System.out.println("Account C ");
-                break;
-            case ACCOUNT_X:
-                System.out.println("Account X ");
-                break;
-            default:
-                System.out.println("No account selected");
+            case ACCOUNT_A -> System.out.println("Account A ");
+            case ACCOUNT_B -> System.out.println("Account B ");
+            case ACCOUNT_C -> System.out.println("Account C ");
+            case ACCOUNT_X -> System.out.println("Account X ");
+            default -> System.out.println("No account selected");
         }
 
     }
