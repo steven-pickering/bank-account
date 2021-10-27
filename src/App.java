@@ -16,19 +16,47 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int amount = scanner.nextInt();
 
-        System.out.println("Select bank account A, B, C or X and press enter");
+        int years = 0;
+        System.out.println("Enter years > ");
+        years = scanner.nextInt();
 
+        System.out.println("Select bank account A, B, C or X and press enter");
         char bankAccount = scanner.next().charAt(0);
 
-
         switch (bankAccount) {
-            case ACCOUNT_A -> System.out.println("Account A ");
-            case ACCOUNT_B -> System.out.println("Account B ");
-            case ACCOUNT_C -> System.out.println("Account C ");
-            case ACCOUNT_X -> System.out.println("Account X ");
-            default -> System.out.println("No account selected");
+            case ACCOUNT_A:
+                System.out.println("Account A ");
+                double amountAfterInterestAccA = interestCalculation(amount, bankAInterestRate, years);
+                System.out.println("Amount after interest is > " + amountAfterInterestAccA);
+                break;
+            case ACCOUNT_B:
+                System.out.println("Account B ");
+                double amountAfterInterestAccB = interestCalculation(amount, bankAInterestRate, years);
+                System.out.println("Amount after interest is > " + amountAfterInterestAccB);
+                break;
+            case ACCOUNT_C:
+                System.out.println("Account C ");
+                double amountAfterInterestAccC = interestCalculation(amount, bankAInterestRate, years);
+                System.out.println("Amount after interest is > " + amountAfterInterestAccC);
+                break;
+            case ACCOUNT_X:
+                System.out.println("Account X ");
+                double amountAfterInterestAccX = interestCalculation(amount, bankAInterestRate, years);
+                System.out.println("Amount after interest is > " + amountAfterInterestAccX);
+                break;
+            default:
+                System.out.println("No account selected");
+
+
         }
 
     }
+
+    static double interestCalculation(double amount, double rate, int years) {
+//
+        return amount * rate * years;
+    }
 }
+
+
 
